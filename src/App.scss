@@ -1,0 +1,87 @@
+@import "./assets/scss/variables.scss";
+
+.App {
+  color: white;
+  margin: 40px;
+  font-size: 16px;
+
+  .container {
+    display: flex;
+    align-items: flex-end;
+
+    & > div {
+      margin-right: 20px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: 20px;
+
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+  }
+
+  input,
+  select,
+  button {
+    display: flex;
+    border: none;
+
+    outline: 0;
+    color: #fff;
+    background: #2c3e50;
+    border-radius: 0.25em;
+    margin-top: 10px;
+    width: 250px;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  select,
+  button {
+    cursor: pointer;
+  }
+
+  button {
+    background: $primary-orange;
+    text-shadow: 1px 1px 5px black;
+
+    &:hover {
+      background: $secondary-orange;
+    }
+  }
+  .result {
+    text-decoration: underline;
+    color: $primary-orange;
+    font-size: 20px;
+  }
+
+  @media only screen and (device-width: 767px),
+    only screen and (max-width: 767px) {
+    margin: 10px;
+
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+
+      & > div {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
+
+    input,
+    select,
+    button {
+      width: 100%;
+    }
+  }
+}
